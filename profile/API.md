@@ -19,11 +19,22 @@ project
 |       ├──structure.yaml
 |       └──api.yaml
 ├──src
-|   ├──configs/
+|   ├──auth/
+|   |   ├──router.py
+|   |   ├──schemas.py
+|   |   ├──models.py
+|   |   └──utils.py
+|   ├──aws/
+|   |   ├──client.py
+|   |   ├──config.py
+|   |   └──utils.py
 |   ├──routes/
-|   ├──schemas/
-|   ├──models/
-|   ├──utils/
+|   |   └──router/ # exemplo de rota
+|   |       ├──router.py
+|   |       ├──schemas.py
+|   |       ├──models.py
+|   |       └──utils.py
+|   ├──config.py
 |   └──main.py
 ├──docs/
 ├──requirements
@@ -31,7 +42,6 @@ project
 |   ├──prod.txt
 |   └──base.txt
 ├──tests
-|   ├──utils/
 |   ├──auth/
 |   └──routes/
 ├──develop/
@@ -46,25 +56,26 @@ project
 |.github/workflows/structure.yaml|Comandos que verificaram a organização e padronização de código feito no projeto, um exemplo prático é a utilização do [Pylint](https://github.com/pylint-dev/pylint) para verificar o código seguindo os padrões do Google, dando uma pontuação de quão bem organizado está seu código, caso ele não atinga a pontuação máxima o *push* ou *pull-request* é negado.|
 |.github/workflows/api.yaml|Roda todos os testes criados para o projeto, certificando que tudo está funcionando para então permitir tanto o *push* quanto um *pull-request*.|
 |src/|Todo o código referente a API como as configurações da API.|
-|src/routes/|Código com as rotas da API.|
-|src/schemas/|Código com os esquemas de *Requests* e *Response* das rotas.|
-|src/models/|Código com os modelos e estrutura do banco de dados.|
-|src/utils/|Funções extras para serem utilizadas na API.|
-|src/main.py|Script principal que executa o seviço.|
+|router.py|Endpoints.|
+|schemas.py|Modelos Pydantics.|
+|models.py|Modelos de banco de dados.|
+|utils.py|Funções a serem utilizadas no modulo.|
+|config.py|Script com as configurações globais ou de um modulo da API.|
+|client.py|Script com as conexões com os serviços AWS.|
+|main.py|Script principal que executa o seviço.|
 |docs/|Documentação do projeto que será mostrada no seu repositório.|
-|requirements/|Arquivos de dependências para o projeto.|
-|requirements/base.txt|Bibliotécas bases para o projeto.|
-|requirements/dev.txt|Bibliotécas de desenvolvimento.|
-|requirements/prod.txt|Bibliotécas usadas em produção.|
-|tests/|Testes unitários para verificar o código desenvolvido e certificar de que ele está funcionando.|
-|tests/utils/|Testes referentes as funções extras do projeto.|
+|base.txt|Bibliotécas bases para o projeto.|
+|dev.txt|Bibliotécas de desenvolvimento.|
+|prod.txt|Bibliotécas usadas em produção.|
 |tests/auth/|Testes referentes a autenticação de usuário.|
-|tests/routes/|Testes referentes ao uso das rotas.|
+|tests/routes/|Testes referentes as rotas da API.|
 |develop/|Código de desensolvimento do projeto, isso inclui notebooks, tratamento e visualização de dados, treinamento e teste de modelos entre outros.|
 |.env/|Ambiente virtual para trabalhar no projeto.|
 |Dockerfile|Arquivo Docker usado para construir uma imagem da API para ser executada em um servidor em Cloud no futuro.|
 |.gitignore|Arquivo com todos os arquivos e pastas que devem ser ignorados pelo *git*|
 |.dockerignore|Arquivo com todos os arquivos e pastas que devem ser ignorados pelo Docker.|
+
+**Lembrete:** *O esquema acima serve apenas como base para estruturar projetos de API. Caso haja necessidade, outras estruturas poderam ser usadas que melhor se enquadre para um projeto, mas lembre de documenta-lás depois.*
 
 ## [Padrões de Rotas](#sumário)
 Cada projeto é único, falando em questão das rotas *(url)* de uma API, cada projeto poderá ter rotas exclusivas que façam sentido para o seu uso final, porém, algumas delas serão frequentemente usadas independente do que o projeto se trate. Segue abaixo algumas rotas obrigatórias que deveram existir em cada projeto e como defini-lás.
