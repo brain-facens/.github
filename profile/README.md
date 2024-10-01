@@ -1,4 +1,4 @@
-## Bem vindo ao BRAIN! 👋
+## Welcome to BRAIN! 👋
 
 <!--
 
