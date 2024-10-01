@@ -11,6 +11,4 @@
 🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 -->
 
-A Inteligência Artificial usa algoritmos e modelos matemáticos para aprender com dados e, em seguida, aplicar esse conhecimento para realizar tarefas específicas. Nós somos O BRAIN trabalha, utilizamos a IA para o desenvolvimento e aplicação de projetos que auxiliam na tomada de decisão em problemas complexos em diversos segmentos da indústria.
-
-[Padrões de Projetos BRAIN](https://github.com/brain-facens/meta)
+We are BRAIN, an innovation center dedicated to transforming complex challenges into practical solutions through Artificial Intelligence. Our expertise spans Machine Learning, Deep Learning, and Language Large Models, technologies we use to develop algorithms that learn from real data and deliver precise insights. We create customized solutions that enhance strategic decision-making, optimize processes, and drive results. We operate across various industrial sectors, helping our partners increase operational efficiency and reduce costs while integrating AI as an essential tool for their continuous growth and innovation.
